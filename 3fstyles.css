@@ -1,0 +1,15 @@
+.thumbnail-container {
+display: flex;
+gap: 20px;
+}
+.thumbnail img {
+width: 150px;
+height: auto;
+border: 1px solid #ccc;
+padding: 5px;
+}
+.thumbnail-text {
+text-align: center;
+font-size: 14px;
+margin-top: 5px;
+}
