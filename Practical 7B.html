@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Field Validation</title>
+<script>
+function validateForm() {
+const name = document.getElementById("name").value;
+const country = document.getElementById("country").value;
+const terms = document.getElementById("terms").checked;
+if (name === "") {
+alert("Name field cannot be empty!");
+return false;
+}
+if (country === "Select") {
+alert("Please select a country!");
+return false;
+}
+if (!terms) {
+alert("Please accept the terms!");
+return false;
+}
+alert("Form submitted successfully!");
+return true;
+}
+</script>
+</head>
+<body>
+<h1>Form Validation</h1>
+<form onsubmit="return validateForm()">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name"><br><br>
+<label for="country">Country:</label>
+<select id="country">
+<option value="Select">Select</option>
+<option value="India">India</option>
+<option value="USA">USA</option>
+</select><br><br>
+
+<input type="checkbox" id="terms">
+<label for="terms">Accept Terms and
+
+Conditions</label><br><br>
+
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
