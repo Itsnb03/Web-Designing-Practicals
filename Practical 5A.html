@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Form with All Controls</title>
+</head>
+<body>
+<h1>Form Example</h1>
+<form action="/submit_form" method="post">
+<label for="name">Name:</label>
+<input type="text" id="name" name="name"><br><br>
+<label for="password">Password:</label>
+<input type="password" id="password"
+name="password"><br><br>
+<label for="gender">Gender:</label>
+<input type="radio" id="male" name="gender"
+value="male">
+<label for="male">Male</label>
+<input type="radio" id="female" name="gender"
+value="female">
+<label for="female">Female</label><br><br>
+<label for="skills">Skills:</label>
+<input type="checkbox" id="html" name="skills"
+value="HTML">
+<label for="html">HTML</label>
+<input type="checkbox" id="css" name="skills"
+value="CSS">
+<label for="css">CSS</label><br><br>
+<label for="country">Country:</label>
+<select id="country" name="country">
+<option value="india">India</option>
+<option value="usa">USA</option>
+<option value="uk">UK</option>
+</select><br><br>
+<label for="comments">Comments:</label><br>
+<textarea id="comments" name="comments" rows="4"
+cols="30"></textarea><br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>
