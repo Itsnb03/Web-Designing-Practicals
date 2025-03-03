@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Radio and Multi-Select Validation</title>
+<script>
+function validateSelection() {
+const gender =
+
+document.querySelector('input[name="gender"]:checked');
+
+const hobbies = document.getElementById("hobbies");
+if (!gender) {
+alert("Please select a gender!");
+return false;
+}
+if (hobbies.selectedOptions.length === 0) {
+alert("Please select at least one hobby!");
+return false;
+}
+alert("Form submitted successfully!");
+return true;
+}
+</script>
+</head>
+<body>
+<h1>Radio and Multi-Select Validation</h1>
+<form onsubmit="return validateSelection()">
+<label>Gender:</label>
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female">
+
+Female<br><br>
+
+<label for="hobbies">Select Hobbies:</label>
+<select id="hobbies" multiple>
+<option value="Reading">Reading</option>
+<option value="Traveling">Traveling</option>
+<option value="Sports">Sports</option>
+</select><br><br>
+<input type="submit" value="Submit">
+
+</form>
+</body>
+</html>
