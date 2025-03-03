@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admission Form</title>
+</head>
+<body>
+<h1>College Admission Form</h1>
+<form action="/submit_admission" method="post">
+<label for="student-name">Name:</label>
+<input type="text" id="student-name"
+name="student-name"><br><br>
+<label for="email">Email:</label>
+<input type="email" id="email" name="email"><br><br>
+<label for="password">Password:</label>
+<input type="password" id="password"
+name="password"><br><br>
+<label>Course:</label>
+<input type="radio" id="bsc" name="course" value="B.Sc">
+<label for="bsc">B.Sc</label>
+<input type="radio" id="bcom" name="course"
+value="B.Com">
+<label for="bcom">B.Com</label><br><br>
+<label>Subjects:</label>
+<input type="checkbox" id="maths" name="subject"
+value="Mathematics">
+<label for="maths">Mathematics</label>
+<input type="checkbox" id="physics" name="subject"
+value="Physics">
+<label for="physics">Physics</label><br><br>
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+</body>
+</html>
