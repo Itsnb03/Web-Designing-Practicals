@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Document Object Methods</title>
+<script>
+function showContent() {
+document.getElementById("demo").innerHTML = "Welcome toJavaScript!";
+}
+function changeHeading() {
+const headings = document.getElementsByTagName("h1");
+headings[0].innerText = "Heading Changed!";
+}
+</script>
+</head>
+<body>
+<h1>Original Heading</h1>
+<button onclick="showContent()">Show Content</button>
+<button onclick="changeHeading()">Change Heading</button>
+<p id="demo"></p>
+</body>
+</html>
