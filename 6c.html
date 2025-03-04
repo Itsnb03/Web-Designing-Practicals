@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prime Numbers</title>
+<script>
+function displayPrimes() {
+let primes = [];
+for (let i = 2; i <= 100; i++) {
+let isPrime = true;
+for (let j = 2; j <= Math.sqrt(i); j++) {
+if (i % j === 0) {
+isPrime = false;
+break;
+}
+}
+if (isPrime) {
+primes.push(i);
+}
+}
+document.getElementById("prime-result").innerText =
+`Prime Numbers: ${primes.join(", ")}`;
+}
+</script>
+</head>
+<body>
+<h1>Prime Numbers Between 1 and 100</h1>
+<button onclick="displayPrimes()">Show Prime
+Numbers</button>
+<p id="prime-result"></p>
+</body>
+</html>
