@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Prompt for Name</title>
+<script>
+function getName() {
+const name = prompt("Please enter your name:");
+if (name) {
+document.getElementById("display-name").innerText =
+
+`Hello, ${name}!`;
+}
+}
+</script>
+</head>
+<body onload="getName()">
+<h1 id="display-name">Welcome!</h1>
+</body>
+</html>
