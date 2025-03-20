@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mouse Events</title>
+<style>
+#box {
+width: 200px;
+height: 200px;
+background-color: lightblue;
+margin-top: 20px;
+text-align: center;
+line-height: 200px;
+}
+</style>
+</head>
+<body>
+<h2>Mouse Event Demonstration</h2>
+<p>Move your mouse over and interact with the box below:</p>
+<!-- Box for mouse events -->
+<div id="box">
+Hover and click me!
+</div>
+<p id="eventMessage"></p>
+<p id="eventMessages"></p>
+<script>
+// onMouseDown event (Triggered when mouse button is pressed down)
+document.getElementById('box').onmousedown = function(event) {
+document.getElementById('eventMessage').innerText = 'Mouse ButtonDown!';
+};
+// onMouseMove event (Triggered when the mouse is moved over the box)
+document.getElementById('box').onmousemove = function(event) {
+document.getElementById('eventMessage').innerText = 'Mouse Moving onthe Box! Position: (' + event.clientX + ', ' + event.clientY + ')';
+};
+// onMouseOut event (Triggered when the mouse leaves the box)
+
+document.getElementById('box').onmouseout = function(event) {
+document.getElementById('eventMessage').innerText = 'Mouse Out of theBox!';
+};
+// onMouseOver event (Triggered when the mouse enters the box)
+document.getElementById('box').onmouseover = function(event) {
+document.getElementById('eventMessage').innerText = 'Mouse Over theBox!';
+};
+// onMouseUp event (Triggered when the mouse button is released)
+document.getElementById('box').onmouseup = function(event) {
+document.getElementById('eventMessage').innerText = 'Mouse ButtonUp!';
+};
+// onMove event (Triggered when the mouse moves over the page, notspecific to an element)
+window.onmousemove = function(event) {
+document.getElementById('eventMessages').innerText = 'Mouse Moving onpage! Position: (' + event.clientX + ', ' + event.clientY + ')';
+};
+</script>
+</body>
+</html>
