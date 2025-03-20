@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Demonstration</title>
+</head>
+<body>
+<!-- Draggable element -->
+<div id="draggable" draggable="true" style="width: 100px; height: 100px;
+background-color: lightblue; text-align: center; line-height: 100px;">
+Drag Me!
+</div>
+<!-- Drop zone -->
+<div id="dropzone" style="width: 200px; height: 200px; background-color:
+lightgray; margin-top: 20px; text-align: center; line-height: 200px;">
+Drop Here!
+</div>
+<!-- Input field to demonstrate onFocus -->
+<input type="text" id="focusInput" placeholder="Focus on me">
+<!-- Image to demonstrate onError -->
+<img src="nonexistent-image.jpg" id="errorImage" alt="Image not found">
+<script>
+// onFocus event - Alert when the input field is focused
+document.getElementById('focusInput').onfocus = function() {
+alert("Input field is focused!");
+};
+// onDragDrop event - Allow dropping and alert when dropped
+document.getElementById('draggable').ondragstart = function(event) {
+event.dataTransfer.setData("text", event.target.id);
+};
+document.getElementById('dropzone').ondragover = function(event) {
+event.preventDefault(); // Allow drop
+};
+document.getElementById('dropzone').ondrop = function(event) {
+event.preventDefault();
+var data = event.dataTransfer.getData("text");
+var draggedElement = document.getElementById(data);
+
+event.target.appendChild(draggedElement);
+alert("Element dropped!");
+};
+// onError event - Alert when image fails to load
+document.getElementById('errorImage').onerror = function() {
+alert("Error: Image failed to load.");
+};
+</script>
+</body>
+</html>
