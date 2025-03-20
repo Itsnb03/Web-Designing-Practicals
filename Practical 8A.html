@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Demonstration</title>
+<script>
+// Event Handlers
+function onAbortHandler() {
+alert("The media playback was aborted.");
+}
+function onBlurHandler() {
+alert("You left the input field.");
+}
+function onChangeHandler() {
+alert("The input field's value has changed.");
+}
+function onClickHandler() {
+alert("The button was clicked.");
+}
+function onDblClickHandler() {
+alert("The button was double-clicked.");
+}
+</script>
+</head>
+<body>
+<h1>JavaScript Event Demonstration</h1>
+<!-- onAbort example -->
+<h2>onAbort Event (for Media elements)</h2>
+<video width="320" height="240" controls onabort="onAbortHandler()">
+<source src="Jinwoo.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<!-- onBlur example -->
+<h2>onBlur Event (for Input Fields)</h2>
+
+<input type="text" placeholder="Click here and leave"
+onblur="onBlurHandler()" />
+<!-- onChange example -->
+<h2>onChange Event (for Input Fields)</h2>
+<input type="text" placeholder="Type something"
+onchange="onChangeHandler()" />
+<!-- onClick example -->
+<h2>onClick Event (for Button)</h2>
+<button onclick="onClickHandler()">Click Me</button>
+<!-- onDblClick example -->
+<h2>onDblClick Event (for Button)</h2>
+<button ondblclick="onDblClickHandler()">Double Click Me</button>
+</body>
+</html>
