@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Events</title>
+</head>
+<body>
+<!-- Input field for onKeyDown, onKeyPress, and onKeyUp events -->
+<input type="text" id="keyInput" placeholder="Type something..."
+style="margin-bottom: 10px;">
+<p id="keyEvents"></p>
+<!-- Form for onReset and onSubmit events -->
+<form id="myForm">
+<input type="text" name="name" placeholder="Enter your name">
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+</form>
+<br><br>
+<!-- Textarea for onSelect event -->
+<textarea id="textArea" placeholder="Select some text here" rows="4"
+cols="50"></textarea>
+<p id="selectMessage"></p>
+<script>
+// onKeyDown, onKeyPress, onKeyUp events
+document.getElementById('keyInput').onkeydown = function(event) {
+document.getElementById('keyEvents').innerText = 'Key Down: ' +
+event.key;
+};
+document.getElementById('keyInput').onkeypress = function(event) {
+document.getElementById('keyEvents').innerText = 'Key Press: ' +
+event.key;
+};
+document.getElementById('keyInput').onkeyup = function(event) {
+document.getElementById('keyEvents').innerText = 'Key Up: ' +
+event.key;
+};
+// onLoad event (called when the page is loaded)
+
+window.onload = function() {
+alert("Page has loaded!");
+};
+// onResize event (called when the window is resized)
+window.onresize = function() {
+alert('Window has been resized!');
+};
+// onReset event (called when the form is reset)
+document.getElementById('myForm').onreset = function() {
+alert('Form has been reset!');
+};
+// onSubmit event (called when the form is submitted)
+document.getElementById('myForm').onsubmit = function(event) {
+event.preventDefault(); // Prevent actual submission for demonstration
+alert('Form has been submitted!');
+};
+// onSelect event (called when some text is selected in the textarea)
+document.getElementById('textArea').onselect = function() {
+document.getElementById('selectMessage').innerText = 'Text selected!';
+};
+// onUnload event (called when the page is unloaded)
+window.onbeforeunload = function() {
+return "Are you sure you want to leave?";
+};
+</script>
+</body>
+</html>
