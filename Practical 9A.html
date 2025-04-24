@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>jQuery Effect Example</title>
+<script
+src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+// Fade out the paragraph when the button is clicked
+$("#hideButton").click(function(){
+$("p").fadeOut();
+});
+// Fade in the paragraph when the other button is clicked
+$("#showButton").click(function(){
+$("p").fadeIn();
+});
+});
+</script>
+</head>
+<body>
+<button id="hideButton">Hide Paragraph</button>
+<button id="showButton">Show Paragraph</button>
+<p>This is a sample paragraph. Click buttons to hide or show this
+text.</p>
+</body>
+</html>
